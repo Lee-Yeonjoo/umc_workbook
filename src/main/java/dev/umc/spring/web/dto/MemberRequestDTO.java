@@ -22,11 +22,11 @@ public class MemberRequestDTO {
         Integer birthMonth;
         @NotNull
         Integer birthDay;
-        @Size(min=5, max = 12)
+        @Size(min=1, max = 12) //글자수 안 지키고 요청 보내서 오류가 난거였다.. 한글이라서가 아니라..
         String address;
-        @Size(min = 5, max = 12)
+        @Size(min = 1, max = 12)
         String specAddress;
-        //@ExistCategories
+        @ExistCategories
         List<Long> preferCategory;
     }
 }

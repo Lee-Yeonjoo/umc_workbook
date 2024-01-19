@@ -13,7 +13,7 @@ public class MemberResponseDTO {
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class JoinResultDTO{
+    public static class JoinResultDTO{ //회원가입 응답의 결과로 멤버아이디와 시간을 보냄.
         Long memberId;
         LocalDateTime createdAt;
     }

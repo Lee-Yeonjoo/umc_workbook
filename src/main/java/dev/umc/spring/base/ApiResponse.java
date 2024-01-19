@@ -18,11 +18,11 @@ public class ApiResponse<T> {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private T result;
 
-    public static <T> ApiResponse<T> onSuccess(T data, Code code) {
-        return new ApiResponse<>(true, code.getCode(), code.getMessage(), data);
+    public static <T> ApiResponse<T> onSuccess(T data) {
+        return new ApiResponse<>(true, Code.OK.getCode(), Code.OK.getMessage(), data);
     }
 
-    public static <T> ApiResponse<T> onFailure(T data, Code code) {
-        return new ApiResponse<>(false, code.getCode(), code.getMessage(), data);
+    public static <T> ApiResponse<T> onFailure(String code, String message, T data) {
+        return new ApiResponse<>(false, code, message, data);
     }
 }

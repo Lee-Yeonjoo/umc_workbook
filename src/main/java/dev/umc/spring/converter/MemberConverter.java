@@ -32,7 +32,8 @@ public class MemberConverter {
                 gender = Gender.NONE;
                 break;
         }
-
+        //System.out.println("===============================================================");
+        //System.out.println(request.getAddress());
         return Member.builder()
                 .address(request.getAddress())
                 .specAddress(request.getSpecAddress())
