@@ -12,7 +12,7 @@ import java.util.List;
 
 @Component
 @RequiredArgsConstructor
-public class CategoriesExistValidator implements ConstraintValidator<ExistCategories, List<Long>> {
+public class CategoriesExistValidator implements ConstraintValidator<ExistCategories, List<Long>> { //검증 대상이 카테고리id로 구성된 목록이니까 List<Long>
 
     private final FoodCategoryRepository foodCategoryRepository;
 

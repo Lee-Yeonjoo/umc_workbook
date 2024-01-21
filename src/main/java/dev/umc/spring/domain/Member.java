@@ -59,6 +59,12 @@ public class Member extends BaseEntity {
 
     @ColumnDefault("0")
     private Integer point;
+    @PrePersist //포인트값이 초기화안되어서 넣은 코드.
+    public void prePersist() {
+        if (this.point == null) {
+            this.point = 0;
+        }
+    }
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<MemberAgree> memberAgreeList = new ArrayList<>();
