@@ -1,2 +1,4 @@
-package dev.umc.spring.web.dto;public class Test2 {
+package dev.umc.spring.web.dto;
+
+public class Test2 {
 }
